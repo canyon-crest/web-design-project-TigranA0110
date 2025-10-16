@@ -1,1 +1,96 @@
+body {
+    /* background-color: white(255, 0, 0); /* Background colorr */ 
+    color: #333; /* Font color */ 
+    font-family: Arial; /* Font */
+    padding: 0px; /* padding on the inside */
+    margin: 0; /* padding from the outside */
+}
 
+#container {
+    background-color: #fff(255, 255, 255);
+    width: 1000px;
+    margin: 20px auto;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+
+h1 {
+    color: #444;
+    padding: 15px;
+    text-align: center;
+}
+
+h2 {
+    text-align: center;
+    color: #666;
+    margin-bottom: 20px;
+}
+
+h3 {
+    color: #555;
+    padding-left: 10px;
+    border-left: 4px solid #888; /* Adds a border to the left side of the text box */
+}
+
+p {
+    line-height: 1.6em;
+}
+
+img {
+    width: 30%;
+    max-width: 300px;
+    height: auto;
+    margin: 10px auto;
+    box-sizing: border-box;
+    border-radius: 5px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+}
+
+#train, #car, #mountains {
+    width: 100%;
+    max-width: 300px;
+    height: auto;
+    margin: 10px auto;
+    display: block;
+    border-radius: 5px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+}
+
+a:link {
+    text-decoration: none;
+}
+a:visited {
+    color: #0066cc;
+    text-decoration: none;
+}
+a:hover {
+    color: #333;
+    text-decoration: underline;
+}
+
+@media (max-width:1200px){
+    #container{
+        width: 800px;
+    }
+}
+@media (max-width:992px){
+    #container{
+        width: 90%;
+    }
+}
+@media (max-width: 768px) {
+    #container {
+        width: 100%;
+        padding: 0 10px;
+    }
+    #sidebar {
+        float: none;
+        width: 100%;
+        margin: 0;
+    }
+    img {
+        width: 100%;
+        max-width: none;
+    }
+}
