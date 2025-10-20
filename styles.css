@@ -24,12 +24,6 @@ body {
     align-content: center;
 }
 
-img:hover {
-    transform: scale(1.03);
-    box-shadow: 0 0 20px;
-    transition: all 0.3s ease-in-out;
-}
-
 h1 {
     color: #444;
     padding: 15px;
@@ -45,7 +39,7 @@ h2 {
 h3 {
     color: #555;
     padding-left: 10px;
-    border-left: 4px solid #888; /* Adds a border to the left side of the text box */
+    border-left: 4px solid #888;
 }
 
 p {
@@ -64,6 +58,11 @@ img {
     box-sizing: border-box;
     border-radius: 5px;
     box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease-in-out; 
+}
+
+img:hover {
+    transform: scale(1.03);
 }
 
 #train, #car, #mountains {
@@ -112,4 +111,71 @@ a:hover {
         width: 100%;
         max-width: none;
     }
+}
+
+html, body {
+    overflow-x: hidden;
+}
+
+
+
+
+
+
+
+
+
+
+.image-burst {
+  position: relative;
+  display: block;
+  width: 100%;
+  max-width: 300px;
+  margin: 10px auto;
+}
+
+.image-burst img {
+  border-radius: 5px;
+  box-shadow: 0 0 6px rgba(0,0,0,0.2);
+  transition: 0.5s ease;
+}
+
+.image-burst .main {
+  width: 100%;
+  position: relative;
+  z-index: 2;
+}
+
+.image-burst .side {
+  position: absolute;
+  top: 0;
+  width: 80%;
+  opacity: 0;
+  transform: scale(0.85);
+  z-index: 1;
+  filter: grayscale(30%) contrast(0.9);
+  pointer-events: none;
+}
+
+.image-burst .left { left: -60px; }
+.image-burst .right { right: -60px; }
+
+.image-burst:hover .main {
+  transform: scale(1.05);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.18);
+}
+
+.image-burst:hover .side {
+  opacity: 0.75;
+  transform: scale(0.9);
+  filter: grayscale(10%) contrast(1);
+}
+
+.image-burst:hover .left { transform: translateX(-150px) scale(0.9); }
+.image-burst:hover .right { transform: translateX(150px) scale(0.9); }
+
+@media (max-width: 768px) {
+  .image-burst .side {
+    display: none;
+  }
 }
